@@ -5,6 +5,10 @@
  */
 
 import type { Tool } from '@anthropic-ai/sdk/resources/messages';
+import { mcp_whatsapp_messaging } from '../mcp-servers/whatsapp-messaging.mcp';
+import { mcp_sierra_deals } from '../mcp-servers/sierra-deals.mcp';
+import { mcp_stripe_payments } from '../mcp-servers/stripe-payments.mcp';
+import { mcp_docusign_signing } from '../mcp-servers/docusign-signing.mcp';
 
 interface MCPServer {
   name: string;
@@ -80,15 +84,52 @@ export const mcpRegistry = new MCPRegistry();
 
 // Register all MCP servers (to be called on app initialization)
 export function initializeMCPServers(): void {
-  // Import and register each MCP server
-  // Example pattern:
-  // mcpRegistry.register(whatsappMessagingServer, whatsappHandlers);
-  // mcpRegistry.register(sierraDealsServer, dealsHandlers);
-  // mcpRegistry.register(stripePaymentsServer, stripeHandlers);
-  // mcpRegistry.register(docusignSigningServer, docusignHandlers);
-  // mcpRegistry.register(stage9OrchestrationServer, stage9Handlers);
+  try {
+    // Register each MCP server with its tool handlers
+    const mcpServers = [
+      { server: mcp_whatsapp_messaging, name: 'WhatsApp Messaging' },
+      { server: mcp_sierra_deals, name: 'Sierra Deals Pipeline' },
+      { server: mcp_stripe_payments, name: 'Stripe Payments' },
+      { server: mcp_docusign_signing, name: 'DocuSign Signing' },
+    ];
 
-  console.log('✅ MCP servers initialized');
+    mcpServers.forEach(({ server, name }) => {
+      try {
+        // Extract handlers from tools array
+        const toolHandlers: Record<string, Function> = {};
+        server.tools.forEach((tool: any) => {
+          if (tool.handler && typeof tool.handler === 'function') {
+            toolHandlers[tool.name] = tool.handler;
+          } else {
+            // Tool has schema but no handler - create a placeholder
+            toolHandlers[tool.name] = async (input: Record<string, unknown>) => ({
+              status: 'not_implemented',
+              tool: tool.name,
+              input
+            });
+          }
+        });
+
+        // Register the server
+        mcpRegistry.register(
+          {
+            name: server.name,
+            description: `${name} integration`,
+            tools: server.tools
+          },
+          toolHandlers
+        );
+
+        console.log(`✅ Registered MCP server: ${server.name}`);
+      } catch (error) {
+        console.warn(`⚠️ Failed to register ${name}:`, error);
+      }
+    });
+
+    console.log('✅ All MCP servers initialized');
+  } catch (error) {
+    console.error('❌ Failed to initialize MCP servers:', error);
+  }
 }
 
 export type { MCPContext, MCPServer };
