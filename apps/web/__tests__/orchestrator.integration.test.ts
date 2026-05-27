@@ -4,11 +4,11 @@
  * Verifies stage transitions, state management, and error recovery
  */
 
-import { FirestoreRepository } from '@/lib/db/repository';
+import type { Repository } from '@/lib/db/repository';
 import type { Lead, Property, Deal } from '@/lib/db/repositories';
 
 // Mock repositories
-class MockRepository<T extends { id: string }> implements FirestoreRepository<T> {
+class MockRepository<T extends { id: string }> implements Repository<T> {
   private data: Map<string, T> = new Map();
   private counter = 0;
 
@@ -32,7 +32,7 @@ class MockRepository<T extends { id: string }> implements FirestoreRepository<T>
       id,
       createdAt: new Date(),
       updatedAt: new Date()
-    } as T;
+    } as unknown as T;
     this.data.set(id, record);
     return record;
   }

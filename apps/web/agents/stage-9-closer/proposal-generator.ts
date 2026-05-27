@@ -3,7 +3,7 @@ import theme from '../../documents/themes/sierra-blu-quiet-luxury.json';
 import { adminStorage } from '../../lib/server/firebase-admin';
 
 export class ProposalGenerator {
-  private bucket: ReturnType<ReturnType<typeof getStorage>['bucket']> | null = null;
+  private bucket: any = null;
 
   private getBucket() {
     if (this.bucket) {
@@ -36,7 +36,7 @@ export class ProposalGenerator {
         bedrooms: property.bedrooms,
       },
       terms: deal.terms,
-      branding: theme.palette,
+      branding: theme.colors || theme,
     };
 
     // 2. Logic to generate DOCX/PDF

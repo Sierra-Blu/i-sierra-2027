@@ -49,14 +49,14 @@ export async function POST(req: NextRequest) {
 
         lastMigrationResult = {
           ...result,
-          initiatedBy: authResult.uid,
+          initiatedBy: authResult.userId || 'unknown',
           dryRun,
           completedAt: new Date().toISOString(),
         };
 
         // Log migration to audit trail
         console.log('[Admin Migration]', {
-          user: authResult.uid,
+          user: authResult.userId || 'unknown',
           status: result.success ? 'success' : 'failed',
           recordsMigrated: result.results.reduce(
             (sum, r) => sum + r.recordsMigrated,

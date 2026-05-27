@@ -109,7 +109,9 @@ export default function AdminMediaPage() {
   };
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    await processFiles(e.currentTarget.files);
+    if (e.currentTarget.files) {
+      await processFiles(e.currentTarget.files);
+    }
   };
 
   const handleDrag = (e: React.DragEvent) => {
