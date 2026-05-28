@@ -3,7 +3,7 @@ const config = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   roots: ['<rootDir>'],
-  testMatch: ['**/__tests__/**/*.test.ts', '**/__tests__/**/*.test.tsx'],
+  testMatch: ['**/__tests__/**/*.test.ts', '**/__tests__/**/*.test.tsx', '**/__tests__/**/*.test.js'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
@@ -14,15 +14,7 @@ const config = {
     '!**/node_modules/**',
     '!**/.next/**',
   ],
-  // TODO: Restore coverage thresholds once service layer test coverage improves
-  // coverageThreshold: {
-  //   global: {
-  //     branches: 10,
-  //     functions: 10,
-  //     lines: 10,
-  //     statements: 10,
-  //   },
-  // },
+  coverageReporters: ['text-summary', 'lcov', 'json'],
   setupFilesAfterEnv: ['<rootDir>/__tests__/setup.ts'],
   transform: {
     '^.+\\.tsx?$': [

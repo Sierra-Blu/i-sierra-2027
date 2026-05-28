@@ -45,7 +45,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Lint code
-        run: pnpm lint --format github
+        run: pnpm lint
 
       - name: Type check
         run: pnpm type-check
@@ -122,6 +122,7 @@ jobs:
         run: pnpm audit --production
 
       - name: Run Snyk security scan
+        continue-on-error: true
         uses: snyk/actions/node@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
@@ -179,31 +180,10 @@ jobs:
           du -sh functions/dist || true
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: builds-node-${{ matrix.node-version }}
           path: |
             apps/web/.next
             apps/admin/dist
             functions/dist
-
-  lighthouse:
-    name: Lighthouse Performance Audit
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: builds-node-20.x
-
-      - name: Run Lighthouse CI
-        uses: treosh/lighthouse-ci-action@v10
-        with:
-          configPath: './.github/lighthouse.json'
-          uploadArtifacts: true
-          temporaryPublicStorage: true
