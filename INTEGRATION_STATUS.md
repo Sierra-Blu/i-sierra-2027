@@ -25,7 +25,7 @@ This structure is kept as the central source of truth for future Sierra work.
 
 ### Core Sierra sources (branch-aware audit)
 
-- `ahmedfawzy8866/68e6464b99f91883e5fc1c2c2d41e34852b59d5460a7233cb507631612785c27`
+- `ahmedfawzy8866/68e6464b99f91883e5fc1c2c2d41e34852b59d5460a7233cb507631612785c27` (legacy Sierra snapshot repository)
   - Reviewed branches include: `main`, `sierra-blu-consolidation`, `copilot/integrate-all-files`
 - `ahmedfawzy8866/New-folder`
   - Reviewed branches include: `main`, `fix/hero-bilingual-testability-13034483362030825337`
@@ -96,7 +96,7 @@ These are tracked as follow-up workflow hardening items and were not merged blin
 
 1. Resolve workflow-only CI issues (`deploy.yml` Vercel action resolution and external workflow cache path).
 2. Create focused PRs for any branch-specific features that need cherry-picking from:
-   - `ahmedfawzy8866/68e6464b99f91883e5fc1c2c2d41e34852b59d5460a7233cb507631612785c27:sierra-blu-consolidation`
+   - `ahmedfawzy8866/68e6464b99f91883e5fc1c2c2d41e34852b59d5460a7233cb507631612785c27:sierra-blu-consolidation` (legacy Sierra snapshot repository)
    - `ahmedfawzy8866/New-folder:fix/hero-bilingual-testability-13034483362030825337`
    - `ahmedfawzy8866/Sierra-Blu-Systm:copilot/integrate-frontend-and-update-hero-page`
 3. Re-run branch-diff review after gaining access to currently private/unavailable repositories.
