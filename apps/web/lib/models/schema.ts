@@ -131,7 +131,7 @@ export interface Unit extends BaseDocument {
   floorPlanUrl?: string;
 
   // Sync
-  syncSource?: 'manual' | 'property-finder';
+  syncSource?: 'manual' | 'property-finder' | 'airtable' | 'sheets';
   pfReferenceNumber?: string;
   manualOverrides?: string[];   // Fields that should not be overwritten by sync
   lastSyncAt?: Timestamp | FieldValue | string;
