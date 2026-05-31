@@ -1,6 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
+<<<<<<< HEAD
 import * as admin from 'firebase-admin';
 import { adminDb } from '@/lib/server/firebase-admin';
+=======
+import { Timestamp } from 'firebase-admin/firestore';
+import { adminDb } from '@/lib/server/firebase-admin';
+import { verifyRequest, unauthorizedResponse } from '@/lib/server/auth-guard';
+>>>>>>> origin/main
 import {
   propertyFinderService,
   type PropertyFinderListing,
@@ -19,15 +25,26 @@ function toNumber(value: unknown): number | null {
 
 function toDate(value: unknown) {
   if (typeof value !== 'string' && typeof value !== 'number') {
+<<<<<<< HEAD
     return admin.firestore.Timestamp.now();
+=======
+    return Timestamp.now();
+>>>>>>> origin/main
   }
 
   const parsed = new Date(value);
   if (Number.isNaN(parsed.getTime())) {
+<<<<<<< HEAD
     return admin.firestore.Timestamp.now();
   }
 
   return admin.firestore.Timestamp.fromDate(parsed);
+=======
+    return Timestamp.now();
+  }
+
+  return Timestamp.fromDate(parsed);
+>>>>>>> origin/main
 }
 
 function getListingId(property: PropertyFinderListing, fallbackIndex: number) {
@@ -88,12 +105,18 @@ function mapProperty(property: PropertyFinderListing) {
     longitude,
     images: getImages(property),
     featured: false,
+<<<<<<< HEAD
     createdAt: admin.firestore.Timestamp.now(),
     updatedAt: admin.firestore.Timestamp.now(),
+=======
+    createdAt: Timestamp.now(),
+    updatedAt: Timestamp.now(),
+>>>>>>> origin/main
   };
 }
 
 export async function POST(request: NextRequest) {
+<<<<<<< HEAD
   try {
     const authHeader = request.headers.get('authorization');
     const expectedAuth = `Bearer ${process.env.SYNC_API_KEY}`;
@@ -104,6 +127,12 @@ export async function POST(request: NextRequest) {
         { status: 401 }
       );
     }
+=======
+  const auth = await verifyRequest(request);
+  if (!auth.authenticated) return unauthorizedResponse();
+
+  try {
+>>>>>>> origin/main
 
     const body = await request.json();
     const cityId = body?.cityId;
@@ -145,9 +174,15 @@ export async function POST(request: NextRequest) {
           batch = adminDb.batch();
           operationsInBatch = 0;
         }
+<<<<<<< HEAD
       } catch (error) {
         failedCount += 1;
         console.error(`Error mapping property ${property.id ?? index}:`, error);
+=======
+      } catch (_error) {
+        failedCount += 1;
+        console.error(`Error mapping property ${property.id ?? index}:`, _error);
+>>>>>>> origin/main
       }
     }
 

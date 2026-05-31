@@ -11,12 +11,18 @@ A production-ready, unified monorepo consolidating all Sierra-related repositori
 ```
 i-sierra-2027/
 ├── apps/
+<<<<<<< HEAD
 │   ├── web/                    # Main customer-facing app (Next.js + Turbopack)
 │   │   ├── app/               # App Router pages & layouts
+=======
+│   ├── web/                    # Main customer-facing app (Next.js 16 + Turbopack)
+│   │   ├── app/               # App Router pages (62 routes) & layouts
+>>>>>>> origin/main
 │   │   ├── components/        # React components (13+ modules)
 │   │   ├── hooks/             # Custom React hooks
-│   │   ├── lib/               # Utilities, services, models
+│   │   ├── lib/               # Utilities, services, models, agents
 │   │   └── public/            # Static assets
+<<<<<<< HEAD
 │   ├── admin/                 # Admin portal (Vite SPA)
 │   │   └── src/               # React source
 │   ├── api/                   # Python backend (FastAPI)
@@ -26,6 +32,10 @@ i-sierra-2027/
 │   └── agents/                # AI agents & bots
 │       ├── stage-9-closer/    # Closer agent (TypeScript)
 │       └── whatsapp-scraper/  # WhatsApp bot (Node.js)
+=======
+│   └── admin/                 # Admin portal (Vite + React SPA)
+│       └── src/               # React source (auth, CRM, listing modules)
+>>>>>>> origin/main
 ├── packages/
 │   ├── api/                   # Shared API types & clients
 │   ├── db/                    # Firestore models & utilities
@@ -33,8 +43,9 @@ i-sierra-2027/
 │   ├── agents/                # Multi-agent framework
 │   ├── batch/                 # Batch processing queue
 │   ├── config/                # Shared configuration
-│   └── ui/                    # Component library (shadcn/ui)
+│   └── ui/                    # Shared React component library
 ├── functions/                 # Firebase Cloud Functions (Node.js 20)
+<<<<<<< HEAD
 │   └── src/
 │       └── index.ts           # collectData, processDataForApp, api, healthCheck
 ├── scripts/
@@ -48,6 +59,18 @@ i-sierra-2027/
 ├── MIGRATION.md               # Migration map & branch reference
 ├── ARCHITECTURE.md            # Full architecture overview
 └── DEPLOYMENT_GUIDE.md        # End-to-end deployment steps
+=======
+│   ├── src/index.ts           # Functions entry point
+│   └── package.json
+├── workflows/                 # Automation scripts (WhatsApp, owner search, etc.)
+├── .github/workflows/         # CI/CD pipelines
+├── firestore.rules            # Production Firestore security rules
+├── storage.rules              # Production Storage security rules
+├── firebase.json              # Firebase hosting & functions config
+├── pnpm-workspace.yaml        # Monorepo workspace config
+├── turbo.json                 # Turborepo build cache config (v2)
+└── package.json               # Root workspace dependencies
+>>>>>>> origin/main
 ```
 
 ## 🚀 Quick Start
@@ -317,11 +340,10 @@ TELEGRAM_BOT_TOKEN=...
 
 ## 📚 Documentation
 
-- `docs/ARCHITECTURE.md` - System design & integration plan
-- `docs/DEPLOYMENT.md` - Deployment procedures & runbooks
-- `docs/API.md` - REST API specifications
-- `docs/AGENTS.md` - Multi-agent framework guide
-- `docs/DEVELOPMENT.md` - Developer setup & workflow
+- `ARCHITECTURE.md` - System design & data flows
+- `DEPLOYMENT_GUIDE.md` - Deployment procedures & runbooks
+- `API.md` - REST API specifications
+- `CONTRIBUTING.md` - Developer setup & workflow
 
 ## 🤝 Contributing
 
@@ -334,7 +356,7 @@ TELEGRAM_BOT_TOKEN=...
 ## 📞 Support
 
 - **Issues**: GitHub Issues (this repo)
-- **Docs**: See `/docs` directory
+- **Docs**: See `ARCHITECTURE.md`, `API.md`, `DEPLOYMENT_GUIDE.md`
 - **Team**: Slack #sierra-blu
 
 ## 📄 License
@@ -343,6 +365,6 @@ Proprietary - Sierra Blu Inc.
 
 ---
 
-**Last Updated**: May 25, 2026  
+**Last Updated**: May 31, 2026  
 **Build**: Turbopack + Turborepo  
 **Status**: Production Ready ✅
