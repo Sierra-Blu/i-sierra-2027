@@ -615,7 +615,7 @@ curl -X GET https://api.property-finder.eg/v2/properties/SB001 \
   -H "Content-Type: application/json"
 
 Test WhatsApp API:
-curl -X POST https://graph.instagram.com/v18.0/{phone_number_id}/messages \
+curl -X POST https://graph.facebook.com/v18.0/{phone_number_id}/messages \
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{

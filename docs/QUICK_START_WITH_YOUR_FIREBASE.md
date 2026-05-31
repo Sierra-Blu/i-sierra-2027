@@ -6,7 +6,7 @@ Your Firebase project is ready! Here's exactly what to do next.
 
 ```
 Project Name: sierra-blu
-API Key: AIzaSyBZLN2jTTKV34SneGPoWRz1zoRpX5uODjs ✓
+API Key: AIzaSy...your-own-key-from-firebase-console ✓
 Auth Domain: sierra-blu.firebaseapp.com ✓
 Project ID: sierra-blu ✓
 Storage Bucket: sierra-blu.firebasestorage.app ✓
@@ -325,7 +325,7 @@ vercel --prod
 
 ```
 Firebase Project: sierra-blu
-API Key: AIzaSyBZLN2jTTKV34SneGPoWRz1zoRpX5uODjs
+API Key: AIzaSy...your-own-key-from-firebase-console
 Project ID: sierra-blu
 Auth Domain: sierra-blu.firebaseapp.com
 

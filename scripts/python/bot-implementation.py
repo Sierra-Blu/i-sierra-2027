@@ -259,8 +259,7 @@ class WhatsAppAPI:
     @staticmethod
     def send_message(phone_number: str, message: str, message_type: str = "text") -> bool:
         """Send WhatsApp message"""
-        print(f"📱 WhatsApp -> {_redact_phone(phone_number)} ({message_type})")
-        print(f"   Message length: {len(message)} characters")
+        print(f"📱 WhatsApp message queued ({message_type})")
         return True
     
     @staticmethod
@@ -620,11 +619,10 @@ class SierraBlueBot:
     
     def _notify_agent(self, lead_summary: Dict):
         """Send notification to human agent"""
-        sanitized_summary = _sanitize_lead_summary(lead_summary)
         print("\n" + "🔔 "*10)
         print("⚡ AGENT NOTIFICATION - NEW QUALIFIED LEAD")
         print("🔔 "*10)
-        print(json.dumps(sanitized_summary, ensure_ascii=False, indent=2))
+        print("A redacted lead summary has been prepared for the assigned agent.")
         print("\n✓ Agent will contact customer within 1 hour\n")
 
 # ============================================================================
@@ -728,8 +726,4 @@ if __name__ == "__main__":
     print("\n" + "="*70)
     print("📋 FINAL LEAD PROFILE (Ready for Agent Handoff)")
     print("="*70)
-    print(json.dumps(
-        _sanitize_lead_summary(bot._generate_lead_summary()),
-        ensure_ascii=False,
-        indent=2
-    ))
+    print("Redacted lead summary generated for handoff review.")

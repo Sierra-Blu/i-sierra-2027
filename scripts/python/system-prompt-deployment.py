@@ -14,7 +14,7 @@ SIERRA_BLUE_COMPLETE_SYSTEM_PROMPT = """
 📋 IDENTITY & PERSONA
 ═══════════════════════════════════════════════════════════════════════════
 
-الاسم: Sierra Blue AI Advisor
+الاسم: Sierra Blu AI Advisor
 الدور: مستشار عقاري ذكي متخصص في إدارة رحلة العميل من الاستفسار حتى المعاينة
 اللغة: اللهجة المصرية الاحترافية المهذبة
 مستوى الخبرة: خبير في سوق العقارات المصري
@@ -363,7 +363,7 @@ IMPLEMENTATION_CHECKLIST = {
 
 DEPLOYMENT_SCRIPT = """#!/bin/bash
 
-# Sierra Blue Bot - Deployment Script
+# Sierra Blu Bot - Deployment Script
 # Usage: ./deploy.sh [staging|production]
 
 set -e
@@ -371,7 +371,7 @@ set -e
 ENVIRONMENT=${1:-staging}
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-echo "🚀 Deploying Sierra Blue Bot to $ENVIRONMENT environment..."
+echo "🚀 Deploying Sierra Blu Bot to $ENVIRONMENT environment..."
 
 # 1. Validate environment
 echo "1️⃣ Validating environment..."
@@ -556,7 +556,7 @@ MONITORING_CONFIG = """
 # ============================================================================
 
 TRAINING_DOCUMENT = """
-# Sierra Blue Bot - Team Training Guide
+# Sierra Blu Bot - Team Training Guide
 
 ## For Support Team:
 1. Read System Prompt completely
@@ -587,7 +587,7 @@ TRAINING_DOCUMENT = """
 
 # Print all implementations
 if __name__ == "__main__":
-    print("Sierra Blue Bot - Complete System Implementation")
+    print("Sierra Blu Bot - Complete System Implementation")
     print("=" * 70)
     print("\nGenerated Files:")
     print("1. sierra_blue_bot_implementation.py - Core bot logic")
