@@ -13,12 +13,12 @@ jest.mock('@/lib/services/roi-service', () => ({
 }));
 
 jest.mock('@/lib/server/auth-guard', () => ({
-  verifyAdminRequest: (...args: unknown[]) => verifyAdminRequestMock(...args),
+  verifyAdminRequest: jest.fn().mockResolvedValue({ authenticated: true, uid: 'test-user' }),
   unauthorizedResponse: jest.fn(),
 }));
 
-import { NextRequest } from 'next/server';
 import { POST } from '@/app/api/wealth/roi/route';
+import { NextRequest } from 'next/server';
 
 describe('POST /api/wealth/roi', () => {
   beforeEach(() => {
@@ -31,7 +31,7 @@ describe('POST /api/wealth/roi', () => {
       new NextRequest('http://localhost:3000/api/wealth/roi', {
         method: 'POST',
         body: JSON.stringify({}),
-      }),
+      }) as NextRequest,
     );
     const body = await res.json();
 
@@ -51,7 +51,7 @@ describe('POST /api/wealth/roi', () => {
       new NextRequest('http://localhost:3000/api/wealth/roi', {
         method: 'POST',
         body: JSON.stringify({ proposalId: 'missing-proposal' }),
-      }),
+      }) as NextRequest,
     );
     const body = await res.json();
 
@@ -103,7 +103,7 @@ describe('POST /api/wealth/roi', () => {
       new NextRequest('http://localhost:3000/api/wealth/roi', {
         method: 'POST',
         body: JSON.stringify({ proposalId: 'proposal-1' }),
-      }),
+      }) as NextRequest,
     );
     const body = await res.json();
 
@@ -125,7 +125,7 @@ describe('POST /api/wealth/roi', () => {
       new NextRequest('http://localhost:3000/api/wealth/roi', {
         method: 'POST',
         body: JSON.stringify({ proposalId: 'proposal-1' }),
-      }),
+      }) as NextRequest,
     );
     const body = await res.json();
 

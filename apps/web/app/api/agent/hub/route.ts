@@ -1,3 +1,9 @@
+import { NextResponse, NextRequest } from 'next/server';
+import { verifyAdminRequest, unauthorizedResponse } from '@/lib/server/auth-guard';
+
+/**
+ * Agent Hub - Agent orchestration (admin-only)
+ * TODO: Complete agent orchestration implementation
 import { NextResponse } from 'next/server';
 import { GoogleAIService } from '@/lib/server/google-ai';
 import { LEILA_PROMPT } from '@/lib/prompts/leila';
@@ -9,7 +15,9 @@ import { GravityRecall } from '@/lib/server/gravity';
  * Routes an inbound message to one of the Stage-9 personas (Scribe / Curator /
  * Matchmaker / Closer) based on agentId, grounding responses in Gravity Memory.
  */
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
+  const auth = await verifyAdminRequest(req);
+  if (!auth.authenticated) return unauthorizedResponse();
   try {
     const { agentId, message } = await req.json();
 
