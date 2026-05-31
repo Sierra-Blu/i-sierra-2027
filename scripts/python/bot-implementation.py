@@ -63,9 +63,31 @@ class PropertyData:
             "furnishing_level": self.furnishing_level.value,
             "location": self.location,
             "status": self.status.value,
-            "last_updated": self.last_updated.isoformat(),
+            "last_updated": self.last_updated.isoformat() if self.last_updated else None,
             "price": self.price
         }
+
+
+def _redact_phone(phone_number: Optional[str]) -> Optional[str]:
+    if not phone_number:
+        return None
+    visible_digits = 4 if len(phone_number) >= 4 else len(phone_number)
+    return f"{'*' * max(len(phone_number) - visible_digits, 0)}{phone_number[-visible_digits:]}"
+
+
+def _redact_email(email: Optional[str]) -> Optional[str]:
+    if not email or "@" not in email:
+        return email
+    local_part, domain = email.split("@", 1)
+    visible_local = local_part[:2]
+    return f"{visible_local}{'*' * max(len(local_part) - len(visible_local), 0)}@{domain}"
+
+
+def _sanitize_lead_summary(summary: Dict) -> Dict:
+    sanitized = dict(summary)
+    sanitized["phone_number"] = _redact_phone(summary.get("phone_number"))
+    sanitized["email"] = _redact_email(summary.get("email"))
+    return sanitized
 
 @dataclass
 class CustomerPreferences:
@@ -237,8 +259,8 @@ class WhatsAppAPI:
     @staticmethod
     def send_message(phone_number: str, message: str, message_type: str = "text") -> bool:
         """Send WhatsApp message"""
-        print(f"📱 WhatsApp -> {phone_number}")
-        print(f"   {message[:80]}...")
+        print(f"📱 WhatsApp -> {_redact_phone(phone_number)} ({message_type})")
+        print(f"   Message length: {len(message)} characters")
         return True
     
     @staticmethod
@@ -598,10 +620,11 @@ class SierraBlueBot:
     
     def _notify_agent(self, lead_summary: Dict):
         """Send notification to human agent"""
+        sanitized_summary = _sanitize_lead_summary(lead_summary)
         print("\n" + "🔔 "*10)
         print("⚡ AGENT NOTIFICATION - NEW QUALIFIED LEAD")
         print("🔔 "*10)
-        print(json.dumps(lead_summary, ensure_ascii=False, indent=2))
+        print(json.dumps(sanitized_summary, ensure_ascii=False, indent=2))
         print("\n✓ Agent will contact customer within 1 hour\n")
 
 # ============================================================================
@@ -706,7 +729,7 @@ if __name__ == "__main__":
     print("📋 FINAL LEAD PROFILE (Ready for Agent Handoff)")
     print("="*70)
     print(json.dumps(
-        bot._generate_lead_summary(),
+        _sanitize_lead_summary(bot._generate_lead_summary()),
         ensure_ascii=False,
         indent=2
     ))

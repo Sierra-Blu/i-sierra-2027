@@ -39,7 +39,7 @@ All documents inherit from `BaseDocument` and include an `orchestrationState` to
 *   **Identity**: `code` (standardized suffix), `compound`, `propertyType`.
 *   **Orchestration**: `orchestrationState.stage` tracks S1-S4.
 *   **Automation**: `automation` flags for Branding, Publishing (PF/FB), and WhatsApp readiness.
-*   **Ownership**: `ownerType` (Owner/Broker/Internal) to ensure data cleaness.
+*   **Ownership**: `ownerType` (Owner/Broker/Internal) to ensure data cleanliness.
 
 #### 2. Leads (`leads`)
 *   **Profiling**: `aiProfiling` stores interests and `topMatches` (S6 output).
@@ -91,4 +91,3 @@ All UI elements must support **English (EN)** and **Arabic (AR)** through the fo
 ---
 *Created At: 2026-04-09*  
 *Version: 4.1.0 (Expanded Orchestration)*
-

@@ -221,6 +221,10 @@ echo -e "${BLUE}[4/5] Cloning external repos...${NC}" | tee -a "$SETUP_LOG"
 
 cd libs
 
+if [ "${ALLOW_UNVERIFIED_CLONES:-0}" != "1" ]; then
+  echo "  ⚠️ Skipping external clones by default. Set ALLOW_UNVERIFIED_CLONES=1 after verifying the target refs." | tee -a "$SETUP_LOG"
+else
+
 for repo in "motion-principles:kylezantos/design-motion-principles" "taste-skill:Leonxlnx/taste-skill" "impeccable:pbakaus/impeccable"; do
   IFS=':' read -r dir gh_repo <<< "$repo"
   
@@ -235,6 +239,8 @@ for repo in "motion-principles:kylezantos/design-motion-principles" "taste-skill
     echo "  ✅ $dir exists" | tee -a "$SETUP_LOG"
   fi
 done
+
+fi
 
 cd ..
 echo -e "${GREEN}✅ Repos cloned${NC}" | tee -a "$SETUP_LOG"

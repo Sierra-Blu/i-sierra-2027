@@ -266,7 +266,7 @@ class MetaWhatsAppIntegration:
         """
         self.phone_number_id = phone_number_id
         self.access_token = access_token
-        self.base_url = f"https://graph.instagram.com/v18.0/{phone_number_id}/messages"
+        self.base_url = f"https://graph.facebook.com/v18.0/{phone_number_id}/messages"
     
     def send_text_message(self, recipient_phone: str, message_text: str) -> Dict:
         """Send text message"""
@@ -306,7 +306,6 @@ from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google.oauth2.service_account import Credentials as ServiceAccountCredentials
 from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.urllib3 import Request
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from datetime import datetime, timedelta
