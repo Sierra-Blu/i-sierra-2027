@@ -131,13 +131,13 @@ WRAP CELLS true`,
     collection: "leads",
     visibility: "broker",
     icon: "🧠",
-    description: "AI-scored leads with neural property match percentages and Sierra scores",
+    description: "AI-scored leads with neural property match percentages and Leila scores",
     dsl: `VISIBILITY broker
-SHOW "Lead_Name", "Phone", "Budget_Min", "Budget_Max", "Preferred_Compounds", "Preferred_Bedrooms", "Neural_Match_Score", "Sierra_Score", "Matched_Properties", "Status", "Last_Interaction", "Agent_Assigned"
+SHOW "Lead_Name", "Phone", "Budget_Min", "Budget_Max", "Preferred_Compounds", "Preferred_Bedrooms", "Neural_Match_Score", "Leila_Score", "Matched_Properties", "Status", "Last_Interaction", "Agent_Assigned"
 FILTER "Neural_Match_Score" >= 75 PERCENT
 FILTER "Status" IN ("active", "warm", "hot")
 GROUP BY "Status"
-SORT BY "Neural_Match_Score" DESC, "Sierra_Score" DESC
+SORT BY "Neural_Match_Score" DESC, "Leila_Score" DESC
 AI TAGS "Neural_Match_Score"`,
   },
 
