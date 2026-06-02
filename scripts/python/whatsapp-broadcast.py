@@ -40,10 +40,17 @@ def _load_firestore_client(project_id: str | None):
     service_account_json = os.getenv('FIREBASE_SERVICE_ACCOUNT_JSON')
     if not service_account_json:
         raise RuntimeError('FIREBASE_SERVICE_ACCOUNT_JSON is required for Firestore access.')
-    app = firebase_admin.get_app() if firebase_admin._apps else firebase_admin.initialize_app(  # type: ignore[attr-defined]
-        credentials.Certificate(json.loads(service_account_json)),
-        {'projectId': project_id} if project_id else None,
-    )
+    try:
+        app = firebase_admin.get_app()
+    except ValueError:
+        options = {'projectId': project_id} if project_id else None
+        if options is None:
+            app = firebase_admin.initialize_app(credentials.Certificate(json.loads(service_account_json)))
+        else:
+            app = firebase_admin.initialize_app(
+                credentials.Certificate(json.loads(service_account_json)),
+                options,
+            )
     return firestore.client(app=app)
 
 
