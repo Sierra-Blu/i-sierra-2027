@@ -115,7 +115,7 @@ class LeadScorer:
         return 2 if any(name in normalized for name in KNOWN_PREMIUM_COMPOUNDS) else 1
 
 
-_AMOUNT_SUFFIX_RE = re.compile(r'([\d,]+(?:\.\d+)?)\s*([km])(?![a-z\d])')
+_AMOUNT_SUFFIX_RE = re.compile(r'([\d,]+(?:\.\d+)?)\s*([km])(?![a-zA-Z\d])')
 _FIRST_AMOUNT_RE = re.compile(r'[\d,]+(?:\.\d+)?')
 
 

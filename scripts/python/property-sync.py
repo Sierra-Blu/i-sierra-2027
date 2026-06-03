@@ -49,7 +49,7 @@ def _load_firestore_client(project_id: str | None):
     return firestore.client(app=app)
 
 
-_NUMBER_SUFFIX_RE = re.compile(r'([\d,]+(?:\.\d+)?)\s*([km])(?![a-z\d])')
+_NUMBER_SUFFIX_RE = re.compile(r'([\d,]+(?:\.\d+)?)\s*([km])(?![a-zA-Z\d])')
 _FIRST_NUMBER_RE = re.compile(r'[\d,]+(?:\.\d+)?')
 
 
