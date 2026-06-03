@@ -15,14 +15,14 @@ export async function POST(request: Request) {
 
     if (!Array.isArray(rows)) {
       return NextResponse.json(
-        { success: false, message: 'Invalid payload: rows must be an array.' },
+        { success: false, error: 'Invalid payload: rows must be an array.' },
         { status: 400 }
       );
     }
 
     if (rows.length === 0) {
       return NextResponse.json(
-        { success: false, message: 'Invalid payload: rows array cannot be empty.' },
+        { success: false, error: 'Invalid payload: rows array cannot be empty.' },
         { status: 400 }
       );
     }
@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     const apiSecret = process.env.PF_API_SECRET;
 
     if (!apiKey || !apiSecret) {
-      return NextResponse.json({ success: false, message: "Missing system access configuration tokens" }, { status: 500 });
+      return NextResponse.json({ success: false, error: "Missing system access configuration tokens" }, { status: 500 });
     }
 
     for (const row of rows) {
