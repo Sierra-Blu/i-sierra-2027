@@ -340,7 +340,20 @@ export function buildFirestoreQuery(
 
   // ── Compound scope ───────────────────────────────────────────
   if (parsed.compounds.length > 0) {
-    constraints.push(where("Compound", "in", parsed.compounds));
+    const hasInFilter = parsed.filters.some(
+      ({ operator }) => operator === "IN" || operator === "in",
+    );
+
+    if (parsed.compounds.length === 1) {
+      constraints.push(where("Compound", "==", parsed.compounds[0]));
+    } else {
+      if (hasInFilter) {
+        throw new Error(
+          'Firestore queries cannot combine COMPOUND IN (...) with another IN filter unless exactly one compound is provided.',
+        );
+      }
+      constraints.push(where("Compound", "in", parsed.compounds));
+    }
   }
 
   // ── Ordering ─────────────────────────────────────────────────

@@ -60,13 +60,17 @@ export async function pushListingToPF(listing: SBRListing): Promise<PFSyncResult
     }
   }
 
-  try {
-    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-    if (token) headers.Authorization = `Bearer ${token}`;
+  if (!token) {
+    return { success: false, error: 'Authentication required to publish listings' };
+  }
 
+  try {
     const res = await fetch('/api/sync/publish', {
       method: 'POST',
-      headers,
+      headers: {
+        Authorization: 'Bearer ' + token,
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({ unitId: listing.id }),
     });
     const data = await res.json();
