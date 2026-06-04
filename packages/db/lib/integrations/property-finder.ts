@@ -47,15 +47,33 @@ export interface PFListingAnalytics {
 }
 
 export async function pushListingToPF(listing: SBRListing): Promise<PFSyncResult> {
+  if (!listing.id) return { success: false, error: 'listing.id is required' };
+
+  // Try to attach a Firebase ID token when running in the browser.
+  let token: string | undefined;
   try {
+    const { getAuth } = await import('firebase/auth');
+    token = await getAuth().currentUser?.getIdToken();
+  } catch {
+    // ignore (auth may not be initialized in this runtime)
+  }
+
+  try {
+    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    if (token) headers.Authorization = `Bearer ${token}`;
+
     const res = await fetch('/api/sync/publish', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers,
       body: JSON.stringify({ unitId: listing.id }),
     });
     const data = await res.json();
     if (!res.ok) return { success: false, error: data.error };
     return { success: true, id: data.id ?? listing.id };
+  } catch (err) {
+    return { success: false, error: String(err) };
+  }
+}
   } catch (err) {
     return { success: false, error: String(err) };
   }
