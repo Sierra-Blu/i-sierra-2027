@@ -1,5 +1,5 @@
-// sierra-blue/config/views.ts
-// 10 Official Sierra Blue View Configurations
+// sierra-estatese/config/views.ts
+// 10 Official Sierra Estatese View Configurations
 // Each view maps to a specific agent, audience, and Firestore collection.
 
 export interface ViewConfig {
@@ -243,3 +243,4 @@ export function getViewsByRole(role: "public" | "broker" | "investor" | "interna
   const allowed = hierarchy[role] ?? ["public"];
   return Object.values(VIEW_CONFIGS).filter(v => allowed.includes(v.visibility));
 }
+

@@ -1,4 +1,4 @@
-# 🏛️ Sierra Blu: Complete System Audit & Roadmap
+# 🏛️ Sierra Estates: Complete System Audit & Roadmap
 
 ## Part 1: Frontend Design — Final Inventory
 
@@ -119,3 +119,4 @@
 3. **Firebase Storage migration** → All images in cloud
 4. **Investor Intelligence Page** → Price-per-meter analytics
 5. **Interactive Compound Map** → Leaflet + live inventory overlay
+

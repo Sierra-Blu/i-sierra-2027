@@ -1,5 +1,5 @@
 {
-  "name": "@sierra-blu/db",
+  "name": "@sierra-estates/db",
   "version": "1.0.0",
   "description": "Firestore models and database utilities",
   "main": "lib/config.ts",
@@ -15,3 +15,4 @@
     "typescript": "^5.3"
   }
 }
+

@@ -91,7 +91,7 @@ export async function POST(request: Request) {
         id: sessionBufferLogId,
         target_sync_hash: computedSyncHash,
         event_type: "SPREADSHEET_ROW_INGESTION",
-        agent_identity: "Sierra AI Ingestion Pipeline",
+        agent_identity: "Sierra Estates Ingestion Pipeline",
         createdAt: new Date().toISOString(),
         expireAt: expirationTimestamp
       });
@@ -102,3 +102,4 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
   }
 }
+

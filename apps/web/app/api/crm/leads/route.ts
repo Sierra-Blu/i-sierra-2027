@@ -43,7 +43,7 @@ export async function POST(request: Request) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          event_title: `🔥 VIP Immediate Route [Sierra AI Score: ${leadScoreValue}/10]`,
+          event_title: `🔥 VIP Immediate Route [Sierra Estates Score: ${leadScoreValue}/10]`,
           description: `Investor Profile: ${client_name} | Assigned Specialist: ${selectedSalesCloserRepId}`,
           phone_number: client_mobile
         })
@@ -55,3 +55,4 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
   }
 }
+
