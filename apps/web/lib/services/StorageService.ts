@@ -3,7 +3,7 @@ import { getStorage } from 'firebase-admin/storage';
 import { v4 as uuidv4 } from 'uuid';
 
 /**
- * SIERRA BLU STORAGE SERVICE
+ * Sierra Estates STORAGE SERVICE
  * Manages institutional asset storage with high-integrity pathing.
  */
 export class StorageService {
@@ -58,3 +58,4 @@ export class StorageService {
     return `https://storage.googleapis.com/${bucket.name}/${filePath}`;
   }
 }
+

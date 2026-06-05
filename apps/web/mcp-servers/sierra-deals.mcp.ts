@@ -1,5 +1,5 @@
 /**
- * SIERRA BLUE STRATEGIC PIPELINE MCP SERVER (PRODUCTION READY)
+ * Sierra EstatesE STRATEGIC PIPELINE MCP SERVER (PRODUCTION READY)
  * Handles Strategic Pipeline state management & orchestration logic.
  */
 
@@ -49,3 +49,4 @@ export const mcp_sierra_deals = {
     }
   ]
 };
+

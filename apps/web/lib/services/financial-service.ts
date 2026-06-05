@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — FINANCIAL INTELLIGENCE SERVICE (V12.0)
+ * Sierra Estates — FINANCIAL INTELLIGENCE SERVICE (V12.0)
  * Handles detailed valuation, downpayment calculation, and historical trends.
  */
 
@@ -67,3 +67,4 @@ export class FinancialService {
     return Math.round(annualRent / 12);
   }
 }
+

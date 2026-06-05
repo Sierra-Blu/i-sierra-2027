@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — SERVER-SIDE AUTH GUARD  v12.4
+ * Sierra Estates — SERVER-SIDE AUTH GUARD  v12.4
  * Validates Firebase Auth tokens on API routes.
  *
  * Supports three auth methods:
@@ -73,3 +73,4 @@ export function unauthorizedResponse(message = 'Authentication required') {
     { status: 401 }
   );
 }
+

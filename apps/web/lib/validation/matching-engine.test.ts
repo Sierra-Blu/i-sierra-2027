@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — MATCHING ENGINE VALIDATION SUITE
+ * Sierra Estates — MATCHING ENGINE VALIDATION SUITE
  * Tests the neural matching accuracy against real/synthetic data.
  * 
  * Run: npm run test:matching
@@ -161,7 +161,7 @@ const TEST_UNITS: Partial<Unit>[] = [
  * Validation Suite Runner
  */
 export async function runMatchingValidationSuite() {
-  console.log('🧪 SIERRA BLU MATCHING ENGINE VALIDATION\n');
+  console.log('🧪 Sierra Estates MATCHING ENGINE VALIDATION\n');
 
   const testLeadIds: string[] = [];
   const testUnitIds: string[] = [];
@@ -249,3 +249,4 @@ function generateSBRCode(compound?: string, rooms?: number): string {
 
 // Export for testing
 export { TEST_LEADS, TEST_UNITS };
+

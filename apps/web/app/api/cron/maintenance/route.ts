@@ -5,7 +5,7 @@ import { COLLECTIONS } from '@/lib/models/schema';
 import { Timestamp } from 'firebase-admin/firestore';
 
 /**
- * SIERRA BLU — CRON: MAINTENANCE HYGIENE AUDIT
+ * Sierra Estates — CRON: MAINTENANCE HYGIENE AUDIT
  * Runs daily to flag stale listings and maintain portfolio integrity.
  */
 
@@ -52,3 +52,4 @@ export async function GET(req: NextRequest) {
     }, { status: 500 });
   }
 }
+

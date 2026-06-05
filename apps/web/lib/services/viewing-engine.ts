@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — STAGE 8: VIEWING ENGINE
+ * Sierra Estates — STAGE 8: VIEWING ENGINE
  * Automates the scheduling and reminding for site inspections.
  */
 
@@ -67,3 +67,4 @@ export async function completeViewing(viewingId: string, notes?: string) {
 
   await sendTelegramMessage(`✅ <b>Viewing Completed</b>\nStakeholder has inspected the asset. Transitioning to Stage 9: Closing.`);
 }
+

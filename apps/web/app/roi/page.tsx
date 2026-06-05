@@ -95,7 +95,7 @@ export default function RoiAnalysisPage() {
           <div style={{ background: 'rgba(233,193,118,0.05)', border: `1px dashed ${G}`, borderRadius: '16px', padding: '1.5rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
             <HelpCircle size={24} color={G} style={{ flexShrink: 0, marginTop: '2px' }} />
             <div>
-              <h4 style={{ margin: '0 0 0.25rem 0', fontWeight: 500, color: G }}>Sierra AI Insight: Direct Owner Advantage</h4>
+              <h4 style={{ margin: '0 0 0.25rem 0', fontWeight: 500, color: G }}>Sierra Estates Insight: Direct Owner Advantage</h4>
               <p style={{ margin: 0, fontSize: '0.8rem', color: th.textSub, lineHeight: 1.6 }}>
                 By targetting a **40%+ Direct Owner Sourcing Ratio**, Sierra eliminates high co-brokerage fee splits, unlocking an average of **1.5% to 2.2% higher net entry yields** on Golden Square properties.
               </p>
@@ -196,3 +196,4 @@ export default function RoiAnalysisPage() {
     </div>
   );
 }
+

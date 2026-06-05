@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — CLIENT INVENTORY SERVICE (SAFE)
+ * Sierra Estates — CLIENT INVENTORY SERVICE (SAFE)
  * This file is a safe wrapper that calls the API instead of the DB directly.
  */
 
@@ -50,3 +50,4 @@ export const InventoryService = {
     }
   }
 };
+

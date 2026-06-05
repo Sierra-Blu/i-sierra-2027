@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — FIRESTORE DATA MODEL
+ * Sierra Estates — FIRESTORE DATA MODEL
  * Canonical type definitions for all collections.
  * This is the single source of truth for the database schema.
  */
@@ -580,3 +580,4 @@ export const COLLECTIONS = {
   strategicPipeline: 'strategic_pipeline',      // S9 Deal Pipeline
   portfolioAssets: 'portfolio_assets',
 } as const;
+

@@ -22,7 +22,7 @@ export default function SplitHeroViewport() {
             
             <div className="relative z-10 mt-16 max-w-2xl" dir="rtl">
               <span className="text-[10px] font-mono uppercase tracking-widest text-[#C9A84C] bg-[#10233F] px-3 py-1 rounded-full border border-[#C9A84C]/20">
-                Sierra AI Operations Layer
+                Sierra Estates Operations Layer
               </span>
               <h1 className="font-serif text-4xl md:text-6xl text-[#F7F4EE] font-bold tracking-tight mt-4 leading-none">
                 أول موقع متكامل <br />
@@ -76,3 +76,4 @@ export default function SplitHeroViewport() {
     </div>
   );
 }
+

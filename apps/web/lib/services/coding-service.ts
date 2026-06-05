@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — TACTICAL CODING SERVICE
+ * Sierra Estates — TACTICAL CODING SERVICE
  * Implements the Urban Hub OS Smart Coding System (V2.0).
  */
 
@@ -97,3 +97,4 @@ export function getFeatureCodes(text: string): SierraFeatureCode[] {
   
   return codes;
 }
+

@@ -1,7 +1,7 @@
 import { Variants } from "framer-motion";
 
 /**
- * Cinematic Luxury Animation Library (Sierra Blu Intel)
+ * Cinematic Luxury Animation Library (Sierra Estates Intel)
  * Derived from 'magic-animator' and 'luxury-ui' skill signatures.
  */
 
@@ -61,3 +61,4 @@ export const slowReveal: Variants = {
     transition: { duration: 0.8, ease: "circOut" }
   }
 };
+

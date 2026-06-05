@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * SIERRA BLU — LUXURY UI SKELETON (V12.0)
+ * Sierra Estates — LUXURY UI SKELETON (V12.0)
  * Quiet Luxury design system with full theme + direction support.
  *
  * Variant order:
@@ -365,3 +365,4 @@ export const DesktopEnglishShell = ({ children, theme = 'dark' }: { children: Re
 export const DesktopArabicShell = ({ children, theme = 'dark' }: { children: React.ReactNode; theme?: LuxuryTheme }) => (
   <LuxuryProvider theme={theme} dir="rtl">{children}</LuxuryProvider>
 );
+

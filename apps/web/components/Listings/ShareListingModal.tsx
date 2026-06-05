@@ -8,10 +8,10 @@ interface ShareModalProps {
 }
 
 export default function ShareListingModal({ listing, onClose }: ShareModalProps) {
-  const [agentMessage, setAgentMessage] = useState(`Take a look at this Sierra Blu listing: ${listing.title} in ${listing.location}.`);
+  const [agentMessage, setAgentMessage] = useState(`Take a look at this Sierra Estates listing: ${listing.title} in ${listing.location}.`);
   const [copied, setCopied] = useState(false);
 
-  const shareUrl = `https://sierrablurealty.com/listings/${listing.id}`;
+  const shareUrl = `https://sierraestates.luxury/listings/${listing.id}`;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(`${agentMessage}\n\n${shareUrl}`);
@@ -78,7 +78,7 @@ export default function ShareListingModal({ listing, onClose }: ShareModalProps)
         </div>
 
         <div className="modal-footer" style={{ justifyContent: 'center', opacity: 0.6, fontSize: '11px' }}>
-          Sierra Blu — Beyond Brokerage
+          Sierra Estates — Beyond Brokerage
         </div>
       </div>
 
@@ -93,3 +93,4 @@ export default function ShareListingModal({ listing, onClose }: ShareModalProps)
     </div>
   );
 }
+

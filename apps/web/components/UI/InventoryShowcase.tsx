@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * SIERRA BLU — INVENTORY SHOWCASE
+ * Sierra Estates — INVENTORY SHOWCASE
  * High-fidelity grid of exclusive properties with hover states and cinematic reveals.
  * Design: Quiet Luxury (Navy/Gold/Ivory)
  */
@@ -180,3 +180,4 @@ function PropertyCard({ property, index }: { property: Property; index: number }
     </motion.div>
   );
 }
+

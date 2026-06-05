@@ -1,8 +1,8 @@
-# 🧠 Sierra Blu Memory System: The Obsidian Truth Engine
+# 🧠 Sierra Estates Memory System: The Obsidian Truth Engine
 > **Path:** `docs/memory/index.md`  
 > **Aesthetic:** Clean, interconnected, Obsidian-compatible structural documentation.
 
-Welcome to the **Sierra Blu Centralized Memory Base**. This memory base exists to prevent system drift. In a complex monorepos system where Next.js, Firebase rules, Python AI agents, and webhooks are highly coupled, a tiny change in one file can cause cascading breakages elsewhere. 
+Welcome to the **Sierra Estates Centralized Memory Base**. This memory base exists to prevent system drift. In a complex monorepos system where Next.js, Firebase rules, Python AI agents, and webhooks are highly coupled, a tiny change in one file can cause cascading breakages elsewhere. 
 
 This Vault serves as the **"Control Node"** for all developers and future AI models (including Google Antigravity and Claude Code). Always update these files when modifying the API, rules, or database models.
 
@@ -43,3 +43,4 @@ Before pushing any change, verify the following gates:
 *   **Rule 1: Never change a collection field without updating `apps/web/lib/models/schema.ts` first!** The entire schema validation relies on typescript interfaces declared there.
 *   **Rule 2: Never modify public endpoints without checking `lib/server/auth-guard.ts`!** High-risk routes must remain protected.
 *   **Rule 3: Ensure that any new property model respects the UAE/Dubai DLD listing types!** (Refer to `property_finder_integration.md` for permit mapping rules).
+

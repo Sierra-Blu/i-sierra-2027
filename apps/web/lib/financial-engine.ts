@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — DETERMINISTIC FINANCIAL ENGINE
+ * Sierra Estates — DETERMINISTIC FINANCIAL ENGINE
  * "AI explains, code decides."
  * All financial metrics are pure, testable functions — never AI-guessed.
  */
@@ -179,3 +179,4 @@ export function formatCompactEGP(amount: number): string {
 export function formatPercent(value: number): string {
   return `${value >= 0 ? '+' : ''}${value.toFixed(2)}%`;
 }
+

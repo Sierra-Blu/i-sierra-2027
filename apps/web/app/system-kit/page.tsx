@@ -36,7 +36,7 @@ export default function SystemKitPage() {
               <small className="text-xs text-on-surface-variant">This is small print, usually used for legal disclaimers.</small>
             </p>
             <p>
-              An abbreviation: <abbr title="Sierra Blu Realty" className="underline decoration-dotted cursor-help">SBR</abbr>. 
+              An abbreviation: <abbr title="Sierra Estates Realty" className="underline decoration-dotted cursor-help">SBR</abbr>. 
               A citation: <cite>The Architecture of Light</cite>. 
               A short quote: <q>Beyond Brokerage.</q>
             </p>
@@ -63,7 +63,7 @@ export default function SystemKitPage() {
           <div className="bg-surface-container-low p-8 rounded-xl shadow-ambient space-y-8">
             <blockquote className="border-l-2 border-secondary pl-6 italic text-lg text-on-surface-variant">
               "True luxury is not about excess. It is about the complete absence of friction."
-              <footer className="text-sm mt-2 text-primary font-bold">— Sierra Blu Intelligence</footer>
+              <footer className="text-sm mt-2 text-primary font-bold">— Sierra Estates Intelligence</footer>
             </blockquote>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -123,7 +123,7 @@ export default function SystemKitPage() {
                 <span className="text-secondary group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <div className="pt-4 mt-4 border-t border-outline-variant text-on-surface-variant text-sm">
-                By proceeding, you agree to the Sierra Blu bespoke intelligence terms of service.
+                By proceeding, you agree to the Sierra Estates bespoke intelligence terms of service.
               </div>
             </details>
 
@@ -235,7 +235,7 @@ export default function SystemKitPage() {
             <article className="prose prose-sm md:prose-base prose-invert max-w-none">
               <header className="mb-6">
                 <h1 className="text-2xl text-primary font-bold">Article Header</h1>
-                <address className="not-italic text-sm text-on-surface-variant">Written by Sierra AI<br/>Fifth Settlement, Cairo</address>
+                <address className="not-italic text-sm text-on-surface-variant">Written by Sierra Estates<br/>Fifth Settlement, Cairo</address>
               </header>
               <p className="text-on-surface-variant">This represents an independent, self-contained piece of content within the document.</p>
               <aside className="my-6 p-4 border-l-2 border-secondary bg-surface-container-lowest text-sm">
@@ -249,3 +249,4 @@ export default function SystemKitPage() {
     </div>
   );
 }
+

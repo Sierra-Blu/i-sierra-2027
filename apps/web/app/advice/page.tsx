@@ -107,7 +107,7 @@ export default function AskSierraPage() {
             </button>
           </Link>
           <div>
-            <h1 style={{ margin: 0, fontSize: '1.25rem', fontWeight: 500, fontFamily: "'Cormorant Garamond', serif", letterSpacing: '0.02em' }}>Ask Sierra AI Advisor</h1>
+            <h1 style={{ margin: 0, fontSize: '1.25rem', fontWeight: 500, fontFamily: "'Cormorant Garamond', serif", letterSpacing: '0.02em' }}>Ask Sierra Estates Advisor</h1>
             <p style={{ margin: 0, fontSize: '0.75rem', color: th.textSub }}>Egypt\'s First & Only Specialized AI Property Broker</p>
           </div>
         </div>
@@ -253,3 +253,4 @@ export default function AskSierraPage() {
     </div>
   );
 }
+

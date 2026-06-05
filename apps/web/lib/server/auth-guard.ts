@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — SERVER-SIDE AUTH GUARD
+ * Sierra Estates — SERVER-SIDE AUTH GUARD
  * Validates Firebase Auth tokens on API routes.
  * Use: wrap any API handler with `withAuth(handler)` or call `verifyRequest(req)`.
  */
@@ -83,3 +83,4 @@ export async function verifyAdminRequest(req: NextRequest): Promise<AuthResult> 
 
   return result;
 }
+

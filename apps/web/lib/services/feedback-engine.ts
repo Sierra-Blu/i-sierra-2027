@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — STAGE 10: FEEDBACK LOOP
+ * Sierra Estates — STAGE 10: FEEDBACK LOOP
  * Closes the circle by capturing stakeholder satisfaction and triggering re-match logic.
  */
 
@@ -88,3 +88,4 @@ export async function recordSelectionFeedback(
     await sendTelegramMessage(`🔥 <b>High Intent Detected</b>\nStakeholder <b>${lead.name}</b> is interested in unit: <code>${unitId}</code>.\nAction: Contact immediately to close.`);
   }
 }
+

@@ -2,7 +2,7 @@
 > **Path:** `docs/memory/security_rules.md`  
 > **Parent Node:** `docs/memory/index.md`
 
-This document details the critical Firestore security rules and authentication gating structure inside Sierra Blu to guarantee data privacy and role compliance.
+This document details the critical Firestore security rules and authentication gating structure inside Sierra Estates to guarantee data privacy and role compliance.
 
 ---
 
@@ -68,3 +68,4 @@ service cloud.firestore {
 ## 🚨 Guard rails for future migrations
 1.  **Do not deploy rules without local test checks!** Running `pnpm test` executes the unit tests which validate these rules against the Firebase Emulator before they are uploaded.
 2.  **Ensure every staff user has a corresponding document in `/users` collection** specifying their role, otherwise they will be blocked from accessing the CRM dashboard.
+

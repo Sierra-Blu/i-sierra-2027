@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — THE NEXUS AGENT (V11.0)
+ * Sierra Estates — THE NEXUS AGENT (V11.0)
  * The Master Core: Persona + Intelligence + External Skills.
  */
 
@@ -35,7 +35,7 @@ export class NexusAgent {
         [
           { 
             role: 'system', 
-            content: `You are the NEXUS CORE of Sierra Blu Realty.
+            content: `You are the NEXUS CORE of Sierra Estates Realty.
             CONTEXT: ${context}
             GOAL: Execute operational orders using the available tools. 
             TONE: Institutional, precise, editorial luxury.
@@ -103,3 +103,4 @@ export class NexusAgent {
     return { id: snap.docs[0].id, ...snap.docs[0].data() } as Lead;
   }
 }
+

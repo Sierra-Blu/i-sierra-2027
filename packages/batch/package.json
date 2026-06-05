@@ -1,5 +1,5 @@
 {
-  "name": "@sierra-blu/batch",
+  "name": "@sierra-estates/batch",
   "version": "1.0.0",
   "description": "Batch processing queue and utilities",
   "main": "src/index.ts",
@@ -14,3 +14,4 @@
     "typescript": "^5.3"
   }
 }
+

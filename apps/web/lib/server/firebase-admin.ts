@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — FIREBASE ADMIN SERVICE (V12.1 Hardened)
+ * Sierra Estates — FIREBASE ADMIN SERVICE (V12.1 Hardened)
  *
  * IMPORTANT: This file must ONLY be imported in server-side components or API routes.
  * Lazy-loads firebase-admin to prevent Metadata service errors during Next.js build.
@@ -97,3 +97,4 @@ async function loadAndInitializeAdmin() {
 loadAndInitializeAdmin().catch(() => {});
 
 export { adminApp, adminAuth, adminDb, adminAppCheck, adminStorage, isAdminInitialized, loadAndInitializeAdmin };
+

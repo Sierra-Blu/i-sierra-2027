@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — FIREBASE CLIENT SINGLETON
+ * Sierra Estates — FIREBASE CLIENT SINGLETON
  * Central Firebase initialization for the frontend.
  * Admin SDK (service-account.json) is for server/scripts only.
  */
@@ -101,3 +101,4 @@ export async function getAnalyticsInstance() {
 }
 
 export default app;
+

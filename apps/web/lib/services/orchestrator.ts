@@ -41,7 +41,7 @@ export class OrchestratorService {
       if (!doc.exists) throw new Error(`Document ${docId} not found in ${collection}`);
 
       let currentStage = forceStage || (doc.data()?.orchestrationState?.stage || 'S1') as OrchestrationStage;
-      console.log(`🚀 Starting Sierra Blu Orchestration for ${docId} at stage ${currentStage}`);
+      console.log(`🚀 Starting Sierra Estates Orchestration for ${docId} at stage ${currentStage}`);
 
       try {
         // --- STAGE EXECUTION LOOP WITH RETRY ---
@@ -188,3 +188,4 @@ export class OrchestratorService {
     }, { merge: true });
   }
 }
+

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { OmnichannelChatService } from '@/lib/services/OmnichannelChatService';
 
 /**
- * SIERRA BLU WEB CONCIERGE CHAT API
+ * Sierra Estates WEB CONCIERGE CHAT API
  * Serves as the dynamic gateway between the web-based LeilaConcierge widget and OmnichannelChatService.
  */
 export async function POST(req: NextRequest) {
@@ -31,3 +31,4 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Failed to process luxury concierge signal", details: error.message }, { status: 500 });
   }
 }
+

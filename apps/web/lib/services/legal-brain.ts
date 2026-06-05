@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — LEGAL INTELLIGENCE BRAIN
+ * Sierra Estates — LEGAL INTELLIGENCE BRAIN
  * "Legal safety is the ultimate luxury."
  * This service maps technical property data to legal risk frameworks.
  */
@@ -81,3 +81,4 @@ export function generateLegalSummary(result: LegalRiskResult, locale: 'en' | 'ar
   if (result.riskLevel === 'medium') return 'Minor legal observations noted; document verification recommended.';
   return 'Warning: Potential legal risks detected. Due diligence required before proceeding.';
 }
+

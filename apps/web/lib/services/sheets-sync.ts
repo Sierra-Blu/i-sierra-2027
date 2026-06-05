@@ -1,7 +1,7 @@
 import { google } from 'googleapis';
 
 /**
- * SIERRA BLU — GOOGLE SHEETS DUAL-INGESTION PROTOCOL
+ * Sierra Estates — GOOGLE SHEETS DUAL-INGESTION PROTOCOL
  */
 export const GoogleSheetsSync = {
   /**
@@ -42,3 +42,4 @@ export const GoogleSheetsSync = {
     }
   }
 };
+

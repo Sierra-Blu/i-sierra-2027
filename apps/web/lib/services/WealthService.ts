@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — WEALTH SERVICE BRIDGE
+ * Sierra Estates — WEALTH SERVICE BRIDGE
  * Orchestrates between raw Inventory and Neural Intelligence.
  */
 
@@ -68,3 +68,4 @@ export const WealthService = {
     return enriched;
   }
 };
+

@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — INTELLIGENCE DATA STRUCTURES
+ * Sierra Estates — INTELLIGENCE DATA STRUCTURES
  * Shared types for neural services and frontend consumption.
  */
 
@@ -14,3 +14,4 @@ export interface IntelligentAsset {
   intelligenceScore: number;
   reasoning: string;
 }
+

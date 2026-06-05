@@ -172,7 +172,7 @@ export default function DreamDecisionPage() {
                 <CheckCircle size={32} />
               </div>
               <span style={{ fontSize: '0.85rem', color: G, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em', display: 'block' }}>
-                Sierra AI Compound Recommendation
+                Sierra Estates Compound Recommendation
               </span>
               <h2 style={{ margin: '0.5rem 0', fontFamily: "'Cormorant Garamond', serif", fontSize: '2.5rem', color: '#fff' }}>
                 {recommendation.compound}
@@ -205,3 +205,4 @@ export default function DreamDecisionPage() {
     </div>
   );
 }
+

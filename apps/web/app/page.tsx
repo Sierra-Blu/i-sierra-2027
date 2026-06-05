@@ -237,7 +237,7 @@ export default function LandingPage() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
             <ShieldLogo size={32} />
             <div>
-              <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.1rem', fontWeight: 600, color: th.accent, letterSpacing: '.15em' }}>SIERRA BLU</span>
+              <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.1rem', fontWeight: 600, color: th.accent, letterSpacing: '.15em' }}>Sierra Estates</span>
               <span style={{ display: 'block', fontSize: '6px', letterSpacing: '.3em', color: th.textSub, marginTop: -2 }}>EGYPT INTEL OS</span>
             </div>
           </div>
@@ -636,7 +636,7 @@ export default function LandingPage() {
                 <span style={{ fontSize: '0.8rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.1em' }}>Sierra Real Estate intelligence</span>
               </div>
               <h2 style={{ margin: '0.25rem 0 0 0', fontFamily: "'Cormorant Garamond', serif", fontSize: '2rem', fontWeight: 300 }}>
-                {aiSupportTab === 'menu' && 'Sierra AI Executive Support'}
+                {aiSupportTab === 'menu' && 'Sierra Estates Executive Support'}
                 {aiSupportTab === 'map' && 'Map Sourcing Intelligence'}
                 {aiSupportTab === 'roi' && 'AI ROI Yield Ranking'}
                 {aiSupportTab === 'pricing' && 'Precise pricing Index'}
@@ -726,7 +726,7 @@ export default function LandingPage() {
                 >
                   <Bot size={24} color={G} />
                   <div>
-                    <strong style={{ display: 'block', fontSize: '0.95rem' }}>Ask for Advice - Sierra AI Broker</strong>
+                    <strong style={{ display: 'block', fontSize: '0.95rem' }}>Ask for Advice - Sierra Estates Broker</strong>
                     <span style={{ fontSize: '0.75rem', color: th.textSub }}>Egypt\'s only specialized AI broker answering all trends.</span>
                   </div>
                   <ChevronRight size={18} style={{ marginLeft: 'auto' }} />
@@ -919,7 +919,7 @@ export default function LandingPage() {
             {aiSupportTab === 'advice' && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                 <div style={{ padding: '1rem', background: 'rgba(255,255,255,0.02)', border: `1px solid ${th.border}`, borderRadius: '12px', fontSize: '0.85rem' }}>
-                  <strong style={{ color: G, display: 'block', marginBottom: '4px' }}>Sierra AI Advisor Broker</strong>
+                  <strong style={{ color: G, display: 'block', marginBottom: '4px' }}>Sierra Estates Advisor Broker</strong>
                   I am specialized in Golden Square, Suez Road and Shorouk sectors. Ask me about average price per sqm or property yields!
                 </div>
                 <Link href="/advice" style={{ width: '100%' }}>
@@ -997,7 +997,7 @@ export default function LandingPage() {
             {/* Sidebar Branding footer */}
             <div style={{ marginTop: 'auto', borderTop: `1px solid ${th.border}`, paddingTop: '1rem', display: 'flex', gap: '8px', alignItems: 'center', justifyContent: 'center' }}>
               <ShieldLogo size={24} />
-              <span style={{ fontSize: '0.7rem', color: th.textMuted }}>Sierra Blu Intelligence OS © 2026</span>
+              <span style={{ fontSize: '0.7rem', color: th.textMuted }}>Sierra Estates Intelligence OS © 2026</span>
             </div>
           </div>
         </div>
@@ -1099,7 +1099,7 @@ export default function LandingPage() {
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
                 <ShieldLogo size={36} />
                 <div>
-                  <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.2rem', fontWeight: 600, color: G }}>SIERRA BLU REALTY</span>
+                  <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.2rem', fontWeight: 600, color: G }}>Sierra Estates REALTY</span>
                   <span style={{ display: 'block', fontSize: '6px', color: 'rgba(255,255,255,0.4)', letterSpacing: '.3em' }}>BEYOND BROKERAGE</span>
                 </div>
               </div>
@@ -1129,7 +1129,7 @@ export default function LandingPage() {
           </div>
           
           <div style={{ borderTop: '1px solid rgba(239,248,247,0.07)', paddingTop: '20px', display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: 'rgba(239,248,247,0.28)' }}>
-            <span>© 2026 Sierra Blu Realty. All rights reserved.</span>
+            <span>© 2026 Sierra Estates Realty. All rights reserved.</span>
             <div style={{ display: 'flex', gap: '15px' }}>
               <span>Privacy Policy</span>
               <span>Terms of Service</span>
@@ -1140,3 +1140,4 @@ export default function LandingPage() {
     </div>
   );
 }
+

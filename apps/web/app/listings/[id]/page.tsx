@@ -45,7 +45,7 @@ export default function PropertyDetailPage() {
         <button onClick={() => router.back()} className="label-sm text-secondary hover:text-primary transition-colors flex items-center gap-2">
           ← {t('common.back')}
         </button>
-        <div className="font-display font-extrabold tracking-tight text-primary text-xl uppercase">SIERRA BLU</div>
+        <div className="font-display font-extrabold tracking-tight text-primary text-xl uppercase">SIERRA ESTATES</div>
         <button className="label-sm bg-primary text-on-primary px-6 py-2 rounded">Concierge</button>
       </nav>
 
@@ -88,7 +88,7 @@ export default function PropertyDetailPage() {
             <div className="w-12 h-px bg-secondary mb-8" />
             <p className="text-on-surface-variant font-light leading-relaxed text-lg mb-8">
               A rare {property.propertyType} positioned within the high-velocity {property.compound} corridor. 
-              Built to capture the optimum market yield while maintaining the privacy and prestige expected of a Sierra Blu listing.
+              Built to capture the optimum market yield while maintaining the privacy and prestige expected of a Sierra Estates listing.
             </p>
             <p className="text-on-surface-variant font-light leading-relaxed text-lg italic">
               "This unit has been manually vetted by our Senior Intelligence Analysts and meets all DQE standards for resale liquidity."
@@ -107,12 +107,14 @@ export default function PropertyDetailPage() {
             >
               Schedule Inspection
             </button>
-            <button 
-              onClick={() => window.print()}
+            <a 
+              href={`/brochure/${property.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full py-4 border border-outline-variant text-on-surface-variant rounded font-display font-bold text-[10px] tracking-widest uppercase hover:border-secondary transition-all flex items-center justify-center gap-2"
             >
               📥 Download PDF Brochure
-            </button>
+            </a>
           </div>
 
           <div className="p-8 border border-outline-variant rounded-xl flex items-center gap-5">

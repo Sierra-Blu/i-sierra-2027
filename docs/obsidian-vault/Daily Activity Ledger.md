@@ -1,6 +1,6 @@
 # 📅 Daily Activity Ledger: Operational Reports Template
 > **Path:** `docs/obsidian-vault/Daily Activity Ledger.md`  
-> **Parent Node:** `[[Sierra Blu Memory Engine]]`
+> **Parent Node:** `[[Sierra Estates Memory Engine]]`
 
 The **Daily Activity Ledger** serves as the permanent historical log of all automated scraper runs, agent conversations, and deal activities in Egypt. It is populated daily by our automation scheduler.
 
@@ -11,7 +11,7 @@ The **Daily Activity Ledger** serves as the permanent historical log of all auto
 Every 24 hours, the system generates a new ledger entry with the following layout:
 
 ```markdown
-### 📅 [YYYY-MM-DD] Sierra Blu Egypt Daily Operations Report
+### 📅 [YYYY-MM-DD] Sierra Estates Egypt Daily Operations Report
 
 #### 🕵️‍♂️ WhatsApp & Portal Scrapers
 - **Properties Scraped:** [Count]
@@ -39,3 +39,4 @@ Every 24 hours, the system generates a new ledger entry with the following layou
 
 ## 📈 Yield Performance Tracking
 The n8n workflow monitors this ledger to generate weekly reports. If active leads drop or scraper failures occur, it triggers an immediate **Telegram Bot Alert** to keep the Egypt brokerage team fully informed.
+

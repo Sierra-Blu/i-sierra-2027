@@ -1,9 +1,15 @@
 import { NextResponse } from 'next/server';
 import { COLLECTIONS } from '@/lib/models/schema';
 import { applyRateLimit, publicEndpointLimiter } from '@/lib/server/rate-limit';
+import { z } from 'zod';
 
-const API_KEY = process.env.NEXT_PUBLIC_FIREBASE_API_KEY || 'AIzaSyBZLN2jTTKV34SneGPoWRz1zoRpX5uODjs';
-const PROJECT_ID = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'sierra-blu';
+const ListingsQuerySchema = z.object({
+  id: z.string().max(128).optional(),
+  limit: z.coerce.number().int().min(1).max(100).optional().default(12),
+});
+
+const API_KEY = process.env.NEXT_PUBLIC_FIREBASE_API_KEY || '';
+const PROJECT_ID = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'sierra-estates';
 
 interface FirestoreValue {
   [key: string]: any;
@@ -110,7 +116,19 @@ export async function GET(request: Request) {
 
   try {
     const { searchParams } = new URL(request.url);
-    const id = searchParams.get('id');
+    const parsed = ListingsQuerySchema.safeParse({
+      id: searchParams.get('id') ?? undefined,
+      limit: searchParams.get('limit') ?? undefined,
+    });
+
+    if (!parsed.success) {
+      return NextResponse.json(
+        { success: false, error: 'Invalid query parameters', details: parsed.error.flatten().fieldErrors },
+        { status: 400 }
+      );
+    }
+
+    const { id, limit } = parsed.data;
 
     if (id) {
       const result = await queryFirestoreRest(COLLECTIONS.units, undefined, id);
@@ -121,8 +139,7 @@ export async function GET(request: Request) {
       return NextResponse.json({ success: true, listing });
     }
 
-    const limitParam = parseInt(searchParams.get('limit') || '12', 10);
-    const result = await queryFirestoreRest(COLLECTIONS.units, limitParam);
+    const result = await queryFirestoreRest(COLLECTIONS.units, limit);
 
     if (!result) {
       return NextResponse.json(

@@ -8,3 +8,27 @@ apps/*/coverage/
 functions/.turbo/
 __pycache__/
 *.pyc
+
+# AI/IDE tool artifacts
+.gemini/
+.cargo/
+.rustup/
+.venv/
+.windsurf/
+.claude/
+.codex/
+.antigravity/
+antigravity-ide/
+
+# Scratch and temp repos
+OpenClaw/
+Sierra-Blu-Systm/
+free-claude-code/
+github-mcp-server/
+i-sierra-2027/
+68e6464b99f91883e5fc1c2c2d41e34852b59d5460a7233cb507631612785c27/
+
+# Duplicate/untracked app folders
+app/
+apps/frontend/
+AppData/

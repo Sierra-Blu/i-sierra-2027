@@ -1,6 +1,6 @@
-# 🏗️ Technical Blueprint: Sierra Blue AI OS (V4.0)
+# 🏗️ Technical Blueprint: Sierra Estatese AI OS (V4.0)
 
-This plan outlines the end-to-end engineering effort to transform Sierra Blue into a fully automated, intelligence-driven Real Estate OS.
+This plan outlines the end-to-end engineering effort to transform Sierra Estatese into a fully automated, intelligence-driven Real Estate OS.
 
 ## Phase 1: WhatsApp Scraper & Parser (✅ COMPLETED)
 Goal: Automate inventory acquisition from broker groups.
@@ -74,3 +74,4 @@ Goal: Visual excellence (Cinzel/Josefin Sans/Noto) and RTL support.
 ### Manual Verification
 - Deploy UI components and verify Luxury Typography (Cinzel/Noto) in the dashboard.
 - Simulate WhatsApp webhook for lead classification.
+

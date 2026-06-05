@@ -1,4 +1,4 @@
-# 🔗 The Nexus Registry (Sierra Blu AI OS)
+# 🔗 The Nexus Registry (Sierra Estates AI OS)
 
 This registry defines the technical contracts between the **Frontend Orchestrator (Antigravity)** and the **Backend Agent (Google AI Studio)**. All changes to APIs, Firestore schemas, or AI response formats must be documented here to prevent integration failures.
 
@@ -72,3 +72,4 @@ This registry defines the technical contracts between the **Frontend Orchestrato
 1.  **Backend Agent Rule**: Before implementing a new API route, check if it's defined here. If not, add it.
 2.  **Frontend Agent Rule**: Consume ONLY the fields and endpoints defined in this registry.
 3.  **Security**: All endpoints must be wrapped in `AuthCheck` logic (handled by Backend Agent).
+

@@ -3,28 +3,17 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./lib/i18n.ts');
 
-// Packages that use Node.js native binaries — must never be bundled client-side
+// Server-only packages — must never be bundled client-side
 const SERVER_ONLY_PACKAGES = [
-  '@grpc/grpc-js',
-  '@opentelemetry/exporter-trace-otlp-grpc',
-  '@opentelemetry/exporter-trace-otlp-http',
-  '@opentelemetry/exporter-logs-otlp-http',
-  '@opentelemetry/sdk-node',
-  '@opentelemetry/sdk-logs',
-  '@opentelemetry/sdk-trace-node',
-  '@opentelemetry/instrumentation-http',
-  '@opentelemetry/instrumentation-express',
   'firebase-admin',
 ];
 
 
 const nextConfig: NextConfig = {
   serverExternalPackages: [
-    '@grpc/grpc-js',
-    '@opentelemetry/exporter-trace-otlp-grpc',
-    '@opentelemetry/sdk-node',
     'firebase-admin',
   ],
+
   typescript: {
     // tsc --noEmit runs in the dedicated CI `type-check` job — that is the gate.
     // Skipping the redundant tsc pass here prevents OOM on memory-constrained CI
@@ -55,15 +44,6 @@ const nextConfig: NextConfig = {
   },
   turbopack: {
     resolveAlias: {
-      '@grpc/grpc-js': './lib/stubs/empty.js',
-      '@opentelemetry/exporter-trace-otlp-grpc': './lib/stubs/empty.js',
-      '@opentelemetry/exporter-trace-otlp-http': './lib/stubs/empty.js',
-      '@opentelemetry/exporter-logs-otlp-http': './lib/stubs/empty.js',
-      '@opentelemetry/sdk-node': './lib/stubs/empty.js',
-      '@opentelemetry/sdk-logs': './lib/stubs/empty.js',
-      '@opentelemetry/sdk-trace-node': './lib/stubs/empty.js',
-      '@opentelemetry/instrumentation-http': './lib/stubs/empty.js',
-      '@opentelemetry/instrumentation-express': './lib/stubs/empty.js',
       'firebase-admin': './lib/stubs/firebase-admin.js',
       'firebase-admin/firestore': './lib/stubs/empty.js',
       'firebase-admin/storage': './lib/stubs/empty.js',

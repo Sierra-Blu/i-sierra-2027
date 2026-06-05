@@ -1,6 +1,6 @@
 # 📥 Sourcing Pipeline & Lead Aggregator
 > **Path:** `docs/obsidian-vault/Sourcing Pipeline & Lead Aggregator.md`  
-> **Parent Node:** `[[Sierra Blu Memory Engine]]`
+> **Parent Node:** `[[Sierra Estates Memory Engine]]`
 
 The primary goal of our sourcing pipeline is to aggregate all properties in the New Cairo (Egypt) resale and rental markets, identify direct-from-owner listings, and filter the absolute best opportunities for clients.
 
@@ -8,7 +8,7 @@ The primary goal of our sourcing pipeline is to aggregate all properties in the 
 
 ## 🎯 The 40% Direct Owner Listing Target
 *   **The Problem:** Traditional brokerages rely heavily on sharing listings, leading to massive property duplication and high broker-cooperation fees.
-*   **The Strategy:** Sierra Blu prioritizes **direct owner listings** (FSBO - For Sale By Owner). We maintain a minimum of **40%+ direct owner** ratio inside our active database.
+*   **The Strategy:** Sierra Estates prioritizes **direct owner listings** (FSBO - For Sale By Owner). We maintain a minimum of **40%+ direct owner** ratio inside our active database.
 *   **The Value:** Owner listings yield higher negotiation margins, unique exclusive terms, and direct communication to facilitate faster, cleaner closures.
 
 ---
@@ -54,3 +54,4 @@ When a new property is aggregated, it passes through this vetting sequence:
           ├── YES (Undervalued by >= 10%) ───────────────► Feature on Website Home
           └── NO (Market Average or Overpriced) ─────────► Save in Backup CRM Database
 ```
+

@@ -1,6 +1,6 @@
 # 📐 Market Valuation Models & Pricing per Square Meter
 > **Path:** `docs/obsidian-vault/Market Valuation Models.md`  
-> **Parent Node:** `[[Sierra Blu Memory Engine]]`
+> **Parent Node:** `[[Sierra Estates Memory Engine]]`
 
 This document details our base valuation matrices to evaluate whether a property listing in New Cairo (Egypt) is priced correctly.
 
@@ -45,3 +45,4 @@ $$\text{Rent-to-Price Ratio} = \frac{\text{Average Purchase Price}}{\text{Averag
 
 *   **Ratio $< 10$:** **"Strong Buy Signal"** — Buy is significantly cheaper than renting.
 *   **Ratio $> 15$:** **"Rent Signal"** — Property prices are inflated relative to rents; renting is financially optimal.
+

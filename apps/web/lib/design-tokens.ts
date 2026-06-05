@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — DESIGN TOKENS V2.0
+ * Sierra Estates — DESIGN TOKENS V2.0
  * "Gold & Diamond" — خليها زي الذهب والماس
  * ─────────────────────────────────────────────────────────────
  * Light = Ivory/Tiffany · Dark = Midnight Navy · Accent = Real Gold
@@ -16,9 +16,9 @@ export const TOKENS = {
   goldGrad:    "linear-gradient(135deg, #E9C176 0%, #C8961A 50%, #F5D78E 75%, #987734 100%)",
 
   // ── NAVY (الأزرق الملكي) ─────────────────────────────────────
-  // Light mode → Sierra blue (فاتح ومشرق)
+  // Light mode → Sierra Estatese (فاتح ومشرق)
   // Dark mode  → Royal/Pepsi blue (ملكي غامق)
-  sierraBlue:  "#1B6CA8",   // Medium bright — light mode primary
+  SierraEstatese:  "#1B6CA8",   // Medium bright — light mode primary
   royalBlue:   "#003087",   // Pepsi/Royal — dark mode primary
   midNavy:     "#0D2D6B",   // Mid — transitions
   deepNavy:    "#071422",   // Darkest — DESIGN.md base
@@ -87,3 +87,4 @@ export const TOKENS = {
 // Google Fonts import string
 export const GOOGLE_FONTS =
   "@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Cairo:wght@300;400;600&display=swap');";
+

@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — PROPERTY CODING ALGORITHM
+ * Sierra Estates — PROPERTY CODING ALGORITHM
  * Implements the proprietary [Location]-[Rooms][Status]-[Price]+[Feature] logic.
  */
 
@@ -192,3 +192,4 @@ export function parseSierraCode(code: string) {
     features: parts[2].includes('+') ? parts[2].split('+')[1].split('') : []
   };
 }
+

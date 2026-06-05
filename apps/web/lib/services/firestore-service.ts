@@ -1,5 +1,5 @@
 /**
- * SIERRA BLU — FIRESTORE SERVICE LAYER
+ * Sierra Estates — FIRESTORE SERVICE LAYER
  * Generic CRUD operations for all collections.
  * Type-safe wrappers around Firestore SDK.
  */
@@ -203,3 +203,4 @@ export const Leads = {
   subscribe: (cb: Parameters<typeof subscribeToCollection>[1], opts?: Parameters<typeof subscribeToCollection>[2]) =>
     subscribeToCollection(COLLECTIONS.stakeholders, cb, opts),
 };
+
