@@ -1,24 +1,4 @@
-export interface PlaybookConfig {
-  baselineSalesTargets: {
-    monthlyRevenueMin: number;
-    conversionRateTarget: number;
-  };
-  performanceMonitoringTriggers: {
-    responseTimeSLA: number;
-    followUpFrequency: string;
-  };
-  commissionStructures: {
-    standard: number;
-    highYield: number;
-    bonusThreshold: number;
-  };
-  responseWindowThresholds: {
-    urgent: number;
-    standard: number;
-  };
-}
-
-export const playbookConfig: PlaybookConfig = {
+export const playbookConfig = {
   baselineSalesTargets: {
     monthlyRevenueMin: 1000000,
     conversionRateTarget: 0.15,
