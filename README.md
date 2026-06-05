@@ -6,6 +6,15 @@ A production-ready, unified monorepo consolidating all Sierra-related repositori
 
 > **Migration complete**: Code and history from `Sierra-Blu-Systm`, `68e6464b...` (hash-repo), `frontend`, and `New-folder` have been consolidated here. See [MIGRATION.md](./MIGRATION.md) for details.
 
+## ✅ Project Status (Sierra Blu 2026)
+
+- Split-Hero with Virtual Tour ✅
+- AI Smart Filter ✅
+- CRM Leads API ✅
+- Property Finder Sync API ✅
+- Careers Page (Framer Motion) ✅
+- Design System (`design.css`) ✅
+
 ## 📦 Repository Structure
 
 ```
@@ -102,6 +111,18 @@ pnpm build
 # Validate complete build
 pnpm validate-build
 ```
+
+## 🐍 Python Scripts
+
+| Script | Purpose |
+|---|---|
+| `lead-scorer.py` | Score leads 1–10 using Sierra AI logic |
+| `firestore-exporter.py` | Export Firestore collections to JSON/CSV |
+| `property-sync.py` | Sync Property Finder listings → Firestore |
+| `whatsapp-broadcast.py` | Send templated WhatsApp broadcasts |
+| `analytics-report.py` | Generate business KPI Markdown reports |
+
+See [docs/PYTHON_SCRIPTS.md](docs/PYTHON_SCRIPTS.md) for full usage.
 
 ## 🔧 Key Technologies
 

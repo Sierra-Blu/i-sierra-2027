@@ -1,13 +1,10 @@
 node_modules/
 .next/
 .env.local
-
-# Agent and Editor Directories
-.antigravity/
-.claude/
-.codex/
-.gemini/
-.windsurf/
 .turbo/
-antigravity-ide/
-free-claude-code/
+coverage/
+apps/*/.turbo/
+apps/*/coverage/
+functions/.turbo/
+__pycache__/
+*.pyc
