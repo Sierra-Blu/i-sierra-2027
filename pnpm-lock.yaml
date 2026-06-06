@@ -98,9 +98,15 @@ importers:
       '@sierra-estates/agents':
         specifier: workspace:*
         version: link:../../packages/agents
+      '@sierra-estates/agents-core':
+        specifier: workspace:*
+        version: link:../../packages/agents-core
       '@sierra-estates/db':
         specifier: workspace:*
         version: link:../../packages/db
+      '@sierra-estates/obedian':
+        specifier: workspace:*
+        version: link:../../packages/obedian
       '@types/leaflet':
         specifier: ^1.9.21
         version: 1.9.21
