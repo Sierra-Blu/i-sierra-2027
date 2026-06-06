@@ -32,3 +32,8 @@ i-sierra-2027/
 app/
 apps/frontend/
 AppData/
+
+# Obedian memory & local backups
+obedian-store.json
+backup/
+
